@@ -1,0 +1,14 @@
+{
+  "name": "@parity/substrate-playground-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "dockerode": "3.2.0",
+    "node-fetch": "2.6.0",
+    "terminal-kit": "1.35.2"
+  },
+  "bin": {
+    "@parity/substrate-playground-cli": "index.js"
+  }
+}
