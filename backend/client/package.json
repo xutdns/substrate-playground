@@ -1,0 +1,29 @@
+{
+  "name": "@parity/substrate-playground-client",
+  "version": "0.8.0",
+  "description": "An isomorphic HTTP client for Substrate Playground",
+  "main": "dist/index.js",
+  "browser": "dist.browser/index.js",
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.browser.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist",
+    "dist.browser"
+  ],
+  "homepage": "https://github.com/paritytech/substrate-playground/tree/master/backend/client#readme",
+  "keywords": [],
+  "author": "Julien Eluard <julien@parity.io>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paritytech/substrate-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paritytech/substrate-playground/issues"
+  },
+  "devDependencies": {
+    "typescript": "3.8.3"
+  }
+}

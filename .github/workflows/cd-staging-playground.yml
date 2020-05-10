@@ -5,6 +5,9 @@ on:
     branches:
       - develop
 
+env:
+  DOCKER_BUILDKIT: 1
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -32,6 +35,11 @@ jobs:
           add_git_labels: true
           tag_with_ref: true
           tag_with_sha: true
+
+          # TODO run kustomize to edit image (sha tag)
+          # set correct context, namespace
+          # run kubectl apply --record -k conf/k8s/overlays/staging
+
 
 #  deploy:
 #    needs: [build]

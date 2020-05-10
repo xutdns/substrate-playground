@@ -29,8 +29,7 @@ import Zoom from '@material-ui/core/Zoom';
 import Fade from '@material-ui/core/Fade';
 import { TransitionProps } from '@material-ui/core/transitions';
 import { Container } from "@material-ui/core";
-import { getInstanceDetails } from "./api";
-import { fetchWithTimeout } from "./utils";
+import { getInstanceDetails } from "@parity/substrate-playground-client";
 
 export function Background({state}: {state: string}) {
     const preloading = state == "PRELOADING";
@@ -145,7 +144,7 @@ export function TheiaPanel() {
             if (phase == "Running") {
                 // Check URL is fine
                 const url = result.url;
-                if((await fetchWithTimeout(url)).ok) {
+                if((await fetch(url, {cache: "no-store"})).ok) {
                     setData({type: "SUCCESS", url: url});
                     return;
                 }

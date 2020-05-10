@@ -1,8 +1,7 @@
 import { useMachine } from '@xstate/react';
 import { v4 as uuidv4 } from 'uuid';
 import { assign, Machine } from 'xstate';
-import { deployImage, getInstanceDetails, getTemplates, getUserDetails, stopInstance } from './api';
-import { fetchWithTimeout } from './utils';
+import { deployImage, getInstanceDetails, getTemplates, getUserDetails, stopInstance } from '@parity/substrate-playground-client';
 
 const key = "userUUID";
 const userUUID = localStorage.getItem(key) || uuidv4();
