@@ -18,14 +18,13 @@ spec:
     - __TO_REPLACE__
     secretName: playground-tls
   rules:
-  - host: __TO_REPLACE__
-    http:
+  - http:
       paths:
       - path: /
         backend:
-          serviceName: server-service
+          serviceName: ui-service
           servicePort: 80
       - path: /api
         backend:
-          serviceName: ui-service
+          serviceName: server-service
           servicePort: 80
